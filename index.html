@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Артём и Ольга — Приглашение на свадьбу — 22 августа 2026</title>
+  <meta name="description" content="Свадебное приглашение Артёма и Ольги — 22 августа 2026" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Артём и Ольга — Приглашение на свадьбу" />
+  <meta property="og:description" content="22 августа 2026" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts (romantic, readable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Marck+Script&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Music control -->
+  <button class="music" id="musicBtn" aria-label="Музыка">
+    <span class="music__icon" aria-hidden="true">♪</span>
+    <span class="music__label" id="musicLabel">Музыка</span>
+  </button>
+  <audio id="bgAudio" preload="auto" loop>
+    <source src="assets/audio/romantic.wav" type="audio/wav" />
+  </audio>
+
+  <!-- Fixed background (changes while scrolling) -->
+  <div class="bg-fixed" id="bgA" aria-hidden="true"></div>
+  <div class="bg-fixed bg-fixed--next" id="bgB" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="section section--hero" id="top" data-bg="assets/img/1000125344.jpg">
+      <div class="card hero">
+        <div class="kicker">СВАДЕБНОЕ ПРИГЛАШЕНИЕ</div>
+        <h1 class="names">Артём <span class="amp">и</span> Ольга</h1>
+        <div class="date-line">22&nbsp;августа&nbsp;2026</div>
+        <p class="lead">Дорогие родные и близкие! Мы будем рады разделить с вами самый важный день нашей жизни.</p>
+
+        <div class="mini">
+          <div class="mini__calendar" aria-label="Календарь: август 2026">
+            <div class="cal">
+              <div class="cal__head">
+                <div class="cal__month">Август</div>
+                <div class="cal__year">2026</div>
+              </div>
+              <div class="cal__dow">
+                <span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span>
+              </div>
+              <div class="cal__grid" id="calGrid"></div>
+            </div>
+          </div>
+
+          <div class="mini__timer" aria-label="Таймер до свадьбы">
+            <div class="timer" id="timer">
+              <div class="t"><div class="t__n" id="d">—</div><div class="t__l">дней</div></div>
+              <div class="t"><div class="t__n" id="h">—</div><div class="t__l">часов</div></div>
+              <div class="t"><div class="t__n" id="m">—</div><div class="t__l">мин</div></div>
+              <div class="t"><div class="t__n" id="s">—</div><div class="t__l">сек</div></div>
+            </div>
+            <a class="ics" href="event.ics" download>Добавить в календарь</a>
+          </div>
+        </div>
+
+        <div class="scroll">Листайте вниз ↓</div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section" id="story" data-bg="assets/img/1000125345.jpg">
+      <div class="overlay"></div>
+      <div class="card">
+        <h2 class="title">Наша история</h2>
+        <p class="text" style="text-align:center; margin-top:6px;">Узнали?</p>
+
+        <div class="polaroids">
+          <figure class="polaroid">
+            <img src="assets/img/1000125349.jpg" alt="Детское фото Ольги" loading="lazy" />
+            <figcaption>Ольга</figcaption>
+          </figure>
+          <figure class="polaroid">
+            <img src="assets/img/1000125350.jpg" alt="Детское фото Артёма" loading="lazy" />
+            <figcaption>Артём</figcaption>
+          </figure>
+        </div>
+
+        <p class="text">Наша история — это много маленьких моментов, которые привели к одному большому «да».</p>
+      </div>
+    </section>
+
+    <!-- PROGRAM + LOCATION -->
+    <section class="section" id="program" data-bg="assets/img/1000125346.jpg">
+      <div class="overlay"></div>
+      <div class="card">
+        <h2 class="title">Программа дня</h2>
+        <div class="timeline">
+          <div class="tl"><div class="tl__t">15:30</div><div class="tl__d">Сбор гостей</div></div>
+          <div class="tl"><div class="tl__t">16:00</div><div class="tl__d">Церемония</div></div>
+          <div class="tl"><div class="tl__t">17:00</div><div class="tl__d">Праздничный банкет</div></div>
+          <div class="tl"><div class="tl__t">00:00</div><div class="tl__d">Завершение вечера</div></div>
+        </div>
+
+        <div class="split">
+          <div>
+            <h3 class="subtitle">Место проведения</h3>
+            <p class="text">Жуковский, Московская область</p>
+            <p class="text">Банкетный зал: <span class="muted">(укажем точное название позже)</span></p>
+            <div class="btns">
+              <a class="btn" href="#" id="routeBtn">Построить маршрут</a>
+              <a class="btn btn--ghost" href="#" id="mapBtn">Открыть карту</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="subtitle">Дресс‑код</h3>
+            <p class="text">Если вам удобнее — выбирайте любой наряд, в котором вы будете чувствовать себя уверенно и комфортно.</p>
+            <div class="swatches">
+              <div class="sw" style="background:#EDE7E3"></div>
+              <div class="sw" style="background:#D8D1CC"></div>
+              <div class="sw" style="background:#B9B1AB"></div>
+              <div class="sw" style="background:#8A8581"></div>
+              <div class="sw" style="background:#DDE5F1"></div>
+              <div class="sw" style="background:#AFC3E6"></div>
+              <div class="sw" style="background:#7EA1D6"></div>
+              <div class="sw" style="background:#4D79B6"></div>
+              <div class="sw" style="background:#2F4F8A"></div>
+              <div class="sw" style="background:#1F2F57"></div>
+            </div>
+            <p class="text muted">Просим воздержаться от белых и чёрных цветов в одежде.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM (simple) -->
+    <section class="section" id="form" data-bg="assets/img/1000125351.jpg">
+      <div class="overlay"></div>
+      <div class="card">
+        <h2 class="title">Анкета гостя</h2>
+        <p class="text">Пожалуйста, подтвердите своё присутствие и заполните анкету ниже.</p>
+
+        <form class="form" id="rsvpForm">
+          <label class="field">
+            <span>Ваше имя и фамилия</span>
+            <input type="text" name="name" placeholder="Например: Иван Иванов" required />
+          </label>
+
+          <div class="field">
+            <span>Планируете ли вы присутствовать?</span>
+            <div class="radio">
+              <label><input type="radio" name="attend" value="yes" required /> Да, с удовольствием</label>
+              <label><input type="radio" name="attend" value="no" /> К сожалению, не смогу</label>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Любимый музыкальный трек</span>
+            <input type="text" name="song" placeholder="Можно ссылкой или названием" />
+          </label>
+
+          <button class="submit" type="submit">Отправить</button>
+          <p class="hint" id="formHint">(Сейчас форма сохраняет ответы у вас в браузере — позже подключим отправку в Telegram/Google‑таблицу.)</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="section" id="footer" data-bg="assets/img/1000125344.jpg">
+      <div class="overlay"></div>
+      <div class="card footer">
+        <h2 class="title">Ждём вас!</h2>
+        <p class="text">С любовью,<br><strong>Артём и Ольга</strong></p>
+        <a class="top" href="#top">Наверх ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
